@@ -1,5 +1,5 @@
 BUILD/K66F/GCC_ARM/main.o: main.cpp BUILD/K66F/GCC_ARM/mbed_config.h \
- TextLCD/TextLCD.h /home/ee2405/ee2405/mbed-os/mbed.h \
+ 4DGL-uLCD-SE/uLCD_4DGL.h /home/ee2405/ee2405/mbed-os/mbed.h \
  /home/ee2405/ee2405/mbed-os/platform/mbed_version.h \
  /home/ee2405/ee2405/mbed-os/rtos/rtos.h \
  /home/ee2405/ee2405/mbed-os/rtos/mbed_rtos_storage.h \
@@ -238,6 +238,5 @@ BUILD/K66F/GCC_ARM/main.o: main.cpp BUILD/K66F/GCC_ARM/mbed_config.h \
  /home/ee2405/ee2405/mbed-os/platform/Callback.h \
  /home/ee2405/ee2405/mbed-os/platform/FunctionPointer.h \
  /home/ee2405/ee2405/mbed-os/platform/ScopedLock.h \
- TextLCD/TextLCD_Config.h TextLCD/TextLCD_UDC.h \
  /home/ee2405/ee2405/mbed-os-build-i2c/targets/TARGET_Freescale/TARGET_MCUXpresso_MCUS/TARGET_K66F/drivers/fsl_port.h \
  /home/ee2405/ee2405/mbed-os-build-i2c/targets/TARGET_Freescale/TARGET_MCUXpresso_MCUS/TARGET_K66F/drivers/fsl_gpio.h

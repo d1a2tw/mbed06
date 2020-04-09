@@ -1,11 +1,11 @@
 
-#include <sstream>
-#include "TextLCD.h"
-#include "string"
+//#include <sstream>
+//#include "TextLCD.h"
+//#include "string"
+#include "uLCD_4DGL.h"
 
-
-
-I2C i2c_lcd(D14,D15);
+uLCD_4DGL uLCD(D1, D0, D2);
+//I2C i2c_lcd(D14,D15);
 
 #include "mbed.h"
 
@@ -59,7 +59,7 @@ I2C i2c( PTD9,PTD8);
 
 Serial pc(USBTX, USBRX);
 
-TextLCD_I2C lcd(&i2c_lcd, 0x4E, TextLCD::LCD16x2);
+//TextLCD_I2C lcd(&i2c_lcd, 0x4E, TextLCD::LCD16x2);
 
 int m_addr = FXOS8700CQ_SLAVE_ADDR1;
 
@@ -143,7 +143,7 @@ int main() {
             t[2], res[4], res[5]\
 
       );
-      float somevar=t[0];
+      /*float somevar=t[0];
       std::ostringstream oss;
       oss << "X=" << std::to_string(somevar) ;
       std::string var = oss.str();
@@ -186,9 +186,21 @@ int main() {
 
         }
 
-      
+      lcd.cls(); */
+
+      uLCD.printf("FXOS8700Q ACC: X=%1.4f(%x%x) Y=%1.4f(%x%x) Z=%1.4f(%x%x)\r\n",\
+
+            t[0], res[0], res[1],\
+
+            t[1], res[2], res[3],\
+
+            t[2], res[4], res[5]\
+
+      );
+
       wait(1.0);
-       lcd.cls();
+      
+      uLCD.cls();
 
    }
 
